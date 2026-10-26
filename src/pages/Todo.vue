@@ -9,12 +9,12 @@ let items = ref([
     {id:i++, text:'Mac', isDone: false, importance: 'low'},
 ]);
 let newItem = ref('');
-let newImportance = ref('');
+let newImportance = ref('medium');
 function add() {
     if (newItem.value.trim() !== '') {
         items.value.push({id:i++, text: newItem.value.trim(), isDone: false, importance: newImportance.value});
         newItem.value = '';
-        newImportance.value = '';
+        newImportance.value = 'medium';
     }
 }
 
